@@ -1,6 +1,14 @@
 # 🚀 IA Engineer Crash Course
 ## Production-Ready AI Engineering in 13 Weeks
 
+> **Status real (10 ago 2026):** `modules/week01-13` e os 4 notebooks de
+> `projects/` existem e rodam ponta a ponta com mocks (sem API key). O que
+> ainda **não** existe: `datasets/` (CSVs reais), `shared/` (código comum
+> extraído), `deploy/` e `monitoring/` (Docker/Terraform/dashboards) — ver
+> [modules/README.md](./modules/README.md) pra status por semana. Também tem
+> 5 projetos bônus fora da ementa oficial em
+> [projects/bonus-agent-patterns/](./projects/bonus-agent-patterns/).
+
 ![Status](https://img.shields.io/badge/status-production--ready-green)
 ![Python](https://img.shields.io/badge/python-3.11+-blue)
 ![LangGraph](https://img.shields.io/badge/langgraph-0.2+-orange)
