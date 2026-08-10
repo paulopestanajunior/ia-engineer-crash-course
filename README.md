@@ -466,22 +466,23 @@ Ao final de 13 semanas:
 ## 📚 Recursos Adicionais
 
 ### **Documentação Completa**
-- [EMENTA.md](./EMENTA.md) - Curriculum detalhado
-- [GETTING_STARTED.md](./GETTING_STARTED.md) - Setup guide
-- [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) - System design
-- [docs/CONCEPTS.md](./docs/CONCEPTS.md) - Explained concepts
+- [EMENTA.md](./EMENTA.md) - Currículo detalhado (índice das 13 semanas)
+- [GETTING_STARTED.md](./GETTING_STARTED.md) - Guia de setup
+- [modules/README.md](./modules/README.md) - Índice dos módulos com status de cada semana
+- [docs/source-material/README.md](./docs/source-material/README.md) - Documentos de planejamento originais (numerados)
 
 ### **Por Projeto**
 - [projects/01-churn-prediction/README.md](./projects/01-churn-prediction/README.md)
 - [projects/02-marketing-campaigns/README.md](./projects/02-marketing-campaigns/README.md)
 - [projects/03-performance-analysis/README.md](./projects/03-performance-analysis/README.md)
 - [projects/04-mmm-optimization/README.md](./projects/04-mmm-optimization/README.md)
+- [projects/bonus-agent-patterns/README.md](./projects/bonus-agent-patterns/README.md) - 5 projetos extras
 
-### **Conceitos**
+### **Conceitos (semana por semana, com explicação completa)**
 - [modules/week01-fundamentos/CONCEITOS.md](./modules/week01-fundamentos/CONCEITOS.md)
 - [modules/week02-structured-outputs/CONCEITOS.md](./modules/week02-structured-outputs/CONCEITOS.md)
-- ... (todas as semanas)
-- [modules/week13-advanced/](./modules/week13-advanced/) (5 conceitos SOTA)
+- ... (ver [modules/README.md](./modules/README.md) pra lista completa das 13 semanas)
+- [modules/week13-advanced/CONCEITOS.md](./modules/week13-advanced/CONCEITOS.md) (5 conceitos SOTA)
 
 ---
 

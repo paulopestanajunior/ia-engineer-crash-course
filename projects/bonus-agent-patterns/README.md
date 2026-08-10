@@ -17,4 +17,4 @@ agente comuns no mercado.
 Todo código tem mocks — sem chamadas reais de API. Pra rodar de verdade,
 troque o mock do LLM pela sua chave da Anthropic (`ANTHROPIC_API_KEY` no `.env`).
 
-Fonte original: `docs/source-material/projetos_codigo.md`.
+Fonte original: [`docs/source-material/04-codigo-projetos-bonus.md`](../../docs/source-material/04-codigo-projetos-bonus.md).

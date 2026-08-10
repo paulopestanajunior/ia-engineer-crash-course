@@ -1,111 +1,142 @@
-## ⚡ WEEK 13: ADVANCED CONCEPTS (SOTA 2026)
+# Semana 13: Conceitos Avançados (SOTA 2026) ⚡
 
-### 13.1 Speculative Decoding ⚡
-**Problem:** Testar 1000 scenarios é lento  
-**Solution:** Draft (Haiku) + Verify (Sonnet)  
-**Result:** 2.5x faster, same accuracy!
+## Visão Geral
 
-- Draft model: Quick generation (Claude Haiku)
-- Verifier model: Accurate verification (Claude Sonnet)
-- Async parallel execution
-- Cost: 60% reduction
+A semana de integração final. Os 5 conceitos abaixo não são "mais uma
+feature" — são técnicas que resolvem problemas específicos de custo,
+confiabilidade e eficiência que só aparecem quando um sistema de agentes já
+está em produção de verdade. O Projeto #4 (Marketing Mix Modeling) foi
+desenhado especificamente pra tocar nos 5 ao mesmo tempo.
+
+---
+
+## 13.1 Speculative Decoding ⚡
+
+**Problema:** testar 1000 cenários com o modelo mais preciso (e mais caro) é
+lento e caro.
+**Solução:** gerar rápido com um modelo barato (draft), verificar só os
+melhores candidatos com um modelo preciso (verify).
+**Resultado:** ~2.5x mais rápido, mesma qualidade final — porque você só
+paga o custo do modelo caro numa fração pequena dos candidatos.
+
+- Draft model: geração rápida (Claude Haiku)
+- Verifier model: verificação precisa (Claude Sonnet)
+- Execução assíncrona em paralelo
+- Redução de custo: ~60%
 
 **Hands-On:** [`projects/04-mmm-optimization/notebook.ipynb`](../../projects/04-mmm-optimization/notebook.ipynb) — `draft_model_generate` + `verifier_model_verify`
-**Project:** #4 MMM (1000 mixes em 5s)
+**Projeto:** #4 MMM (1000 mixes em segundos)
 
 ---
 
-### 13.2 Constitutional AI 🎯
-**Problem:** Agent pode violar constraints  
-**Solution:** Define "constitution" (rules rígidas)  
-**Result:** Alignment garantida!
+## 13.2 Constitutional AI 🎯
 
-- Hard constraints (budget, regulatory)
-- Value alignment
-- No hallucinations
-- Pydantic validators
+**Problema:** um agente pode gerar uma resposta que viola uma regra de
+negócio (ex.: alocar mais que o teto permitido num canal).
+**Solução:** definir uma "constituição" — regras rígidas que a resposta
+precisa satisfazer, verificadas em código, não só pedidas no prompt.
+**Resultado:** alinhamento garantido — a regra não pode ser "esquecida" pelo
+modelo, porque não depende do modelo cumprir, e sim do seu código validar.
+
+- Constraints rígidas (budget, regulatório)
+- Alinhamento de valores
+- Sem alucinação de regras
+- Validators do Pydantic como mecanismo de aplicação
 
 **Hands-On:** [`projects/04-mmm-optimization/notebook.ipynb`](../../projects/04-mmm-optimization/notebook.ipynb) — validators do `MarketingMix`
-**Project:** #4 MMM (budget constraints)
+**Projeto:** #4 MMM (constraints de budget)
 
 ---
 
-### 13.3 Mixture of Experts 🧠
-**Problem:** Uma estratégia não serve pra tudo  
-**Solution:** N experts + router  
-**Result:** Condicional compute = eficiente!
+## 13.3 Mixture of Experts 🧠
 
-- Aggressive expert (max growth)
-- Balanced expert (ROI optimized)
-- Conservative expert (min risk)
-- Router logic
+**Problema:** uma única estratégia não serve pra todas as condições (ex.:
+mercado em alta vs em recessão pedem alocações de budget diferentes).
+**Solução:** múltiplos "experts" especializados + um roteador que escolhe
+qual usar de acordo com a condição atual.
+**Resultado:** compute condicional — você só "ativa" a expertise relevante
+pro contexto atual, em vez de um modelo genérico tentando servir tudo.
+
+- Expert agressivo (máximo crescimento)
+- Expert balanceado (ROI otimizado)
+- Expert conservador (mínimo risco)
+- Lógica de roteamento
 
 **Hands-On:** [`projects/04-mmm-optimization/notebook.ipynb`](../../projects/04-mmm-optimization/notebook.ipynb) — `moe_routing`
-**Project:** #4 MMM (3 strategies)
+**Projeto:** #4 MMM (3 estratégias)
 
 ---
 
-### 13.4 Efficient Fine-tuning 📚
-**Problem:** Treinar modelo é caro  
-**Solution:** LoRA (99% parameter reduction!)  
-**Result:** Treina em 5 min, não 5 horas!
+## 13.4 Fine-tuning Eficiente 📚
+
+**Problema:** treinar um modelo do zero (ou fazer fine-tuning completo) pra
+adaptar a um domínio específico é caro e lento.
+**Solução:** LoRA (Low-Rank Adaptation) — treina só um pequeno conjunto de
+parâmetros "adaptadores" em cima do modelo base, em vez do modelo inteiro.
+**Resultado:** redução de ~99% nos parâmetros treinados, treino em minutos
+em vez de horas.
 
 - LoRA vs QLoRA
 - Adapter tuning
-- Company-specific customization
-- Cost: 99% reduction
+- Customização específica da empresa
+- Redução de custo: ~99%
 
-**Hands-On:** ⏳ não implementado no mock — requer modelo aberto local, ver nota no notebook do #4
-**Project:** #4 MMM (adapt pra seu dataset)
+**Hands-On:** ⏳ não implementado no mock — LoRA requer um modelo aberto
+rodando localmente (não a API da Anthropic), então não faz sentido mockar.
+Ver nota no notebook do Projeto #4.
+**Projeto:** #4 MMM (adaptar pro dataset da empresa)
 
 ---
 
-### 13.5 Synthetic Data 🏭
-**Problem:** Só temos 100 samples  
-**Solution:** AI gera dados realistas!  
-**Result:** 10x mais data!
+## 13.5 Dados Sintéticos 🏭
 
-- Generate realistic scenarios
-- Expand dataset 10x
-- Privacy-preserving
-- Realistic patterns (diminishing returns, seasonality)
+**Problema:** você só tem uma amostra pequena de dados reais (ex.: 100
+semanas de histórico de campanha).
+**Solução:** usar o próprio LLM pra gerar cenários sintéticos realistas que
+expandem o dataset.
+**Resultado:** 5-10x mais dados pra treinar/validar modelos, preservando
+privacidade (dado sintético não é dado real de cliente).
+
+- Gerar cenários realistas
+- Expandir dataset em 5-10x
+- Preserva privacidade
+- Padrões realistas (retornos decrescentes, sazonalidade)
 
 **Hands-On:** [`projects/04-mmm-optimization/notebook.ipynb`](../../projects/04-mmm-optimization/notebook.ipynb) — `generate_synthetic_scenarios`
-**Project:** #4 MMM (100→1000 scenarios)
+**Projeto:** #4 MMM (100 → 500+ cenários)
 
 ---
 
-## 🎯 WEEK 13 INTEGRATION
+## 🎯 Integração da Semana 13
 
-**Project #4: Marketing Mix Modeling** toca TUDO:
+**Projeto #4: Marketing Mix Modeling** toca todos os 5 conceitos juntos:
 
 ```
-INPUT: $1M Budget
+INPUT: $1M de Budget
   ↓
-[Speculative Decoding] ← Fast generation
-  ├─ Draft: 1000 mixes em 0.5s
-  └─ Verify: Top 50 accurately
+[Speculative Decoding] ← Geração rápida
+  ├─ Draft: 1000 mixes em ~0.01s (mock)
+  └─ Verify: Top 20 com precisão
   ↓
-[Constitutional AI] ← Enforce rules
-  ├─ Min per channel: $10K
-  ├─ Max per channel: 40%
+[Constitutional AI] ← Aplica as regras
+  ├─ Mínimo por canal: $10K
+  ├─ Máximo por canal: implícito no mix gerado
   ├─ Total = $1M
-  └─ Regulatory compliance
+  └─ Validação via Pydantic
   ↓
-[MoE Routing] ← Choose strategy
-  ├─ Market boom → aggressive
-  ├─ Market stable → balanced
-  └─ Market recession → conservative
+[Roteamento MoE] ← Escolhe estratégia
+  ├─ Mercado em alta → agressivo
+  ├─ Mercado estável → balanceado
+  └─ Mercado em recessão → conservador
   ↓
-[Synthetic Data] ← Expand dataset
-  ├─ Historical: 100 weeks
-  └─ Synthetic: 1000 scenarios
+[Dados Sintéticos] ← Expande o dataset
+  ├─ Histórico real: 20 semanas
+  └─ Sintético: ~100 cenários adicionais
   ↓
-[Fine-tuning] ← Personalize
-  └─ Adapt pra seu company data
+[Fine-tuning] ← Personalização (não implementado no mock)
+  └─ Adaptar pros dados da empresa
   ↓
-OUTPUT: Optimal budget allocation
+OUTPUT: Alocação de budget otimizada
 ```
 
 ---
-
