@@ -1,8 +1,9 @@
 # Projeto #4: Marketing Mix Modeling (MMM) — SOTA 2026 ⭐
 
-**Domínio:** Marketing budgeting (CPG, Retail, SaaS)
-**Problema:** Como aloco $1M de budget entre TV, Digital, Social e Outdoor?
+**Domínio:** Marketing budgeting
+**Problema:** Como aloco $1M de budget entre TV, Rádio e Jornal?
 **Stack:** Python + LangGraph + Speculative Decoding + Constitutional AI
+**Dataset:** [Advertising (ISLR/Stanford)](../../datasets/README.md) — 200 observações reais, uso educacional livre. Só 3 canais (não 4) — honesto com o dado real disponível.
 
 Projeto de integração final — toca os 5 conceitos SOTA da Week 13, além de
 tudo que veio antes.

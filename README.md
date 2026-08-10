@@ -31,6 +31,11 @@ esportiva e marketing mix modeling.
 - Testes básicos (asserts) dentro de cada notebook
 - LoRA fine-tuning **real** no Projeto #4 (treino genuíno num modelo pequeno,
   não decorativo)
+- **Datasets reais** em `datasets/` — nada de dado fictício gerado on-the-fly
+  como fonte primária (fallback sintético só se o CSV não for encontrado):
+  IBM Telco Churn (7k clientes), UCI Bank Marketing (10k contatos), Fantasy
+  Premier League (865 jogadores), Advertising/ISLR (200 obs. reais). Ver
+  [datasets/README.md](./datasets/README.md) pra fonte e licença de cada um.
 - 5 projetos bônus fora da ementa oficial (`projects/bonus-agent-patterns/`)
 
 ⏳ **Ainda não existe:**
@@ -39,7 +44,6 @@ esportiva e marketing mix modeling.
 - Suite de testes formal (`pytest` com arquivos `test_*.py` separados —
   hoje os testes são células dentro dos notebooks)
 - OpenTelemetry / tracing completo (hoje é logging estruturado simples)
-- `datasets/` com CSVs reais (os notebooks geram dados sintéticos on-the-fly)
 
 Ver [modules/README.md](./modules/README.md) pra status semana a semana.
 

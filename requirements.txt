@@ -2,6 +2,7 @@
 anthropic>=0.40.0
 langgraph>=0.2.0
 pydantic>=2.5.0
+pandas>=2.0.0
 
 # LoRA fine-tuning real (Projeto #4, Semana 13.4)
 torch>=2.0.0

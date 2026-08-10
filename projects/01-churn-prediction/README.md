@@ -1,8 +1,9 @@
 # Projeto #1: Churn Prediction
 
-**Domínio:** SaaS, Streaming, Telecom — qualquer empresa com clientes recorrentes
+**Domínio:** Telecom (dado real)
 **Problema:** Qual cliente vai sair? Por quê? Como reter?
 **Stack:** Python + LangGraph + Pydantic + (Firestore + Claude em produção)
+**Dataset:** [IBM Telco Customer Churn](../../datasets/README.md) — 7.043 clientes reais, Apache 2.0
 
 ## Conceitos cobertos
 

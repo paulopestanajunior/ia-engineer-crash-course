@@ -1,8 +1,9 @@
 # Projeto #3: Performance Analysis
 
-**Domínio:** Esportes / Performance de jogadores
+**Domínio:** Futebol — Premier League (dado real)
 **Problema:** Como está o jogador? Vai melhorar? Qual o valor de mercado?
 **Stack:** Python + LangGraph + Streaming + (Cloud Pub/Sub + Claude em produção)
+**Dataset:** [Fantasy Premier League 2023-24](../../datasets/README.md) — 865 jogadores reais, MIT
 
 ## Conceitos cobertos
 

@@ -1,8 +1,9 @@
 # Projeto #2: Marketing Campaign Analysis
 
-**Domínio:** Marketing (qualquer empresa)
-**Problema:** Qual campanha funciona? Por quê? Como otimizar o próximo ciclo?
+**Domínio:** Telemarketing bancário (dado real — reformulado do plano original de "ads digitais", que não tem dataset público real)
+**Problema:** Qual campanha converte? Por quê? Como otimizar o próximo ciclo?
 **Stack:** Python + LangGraph + Multi-Agent + Cache semântico + (Claude em produção)
+**Dataset:** [UCI Bank Marketing](../../datasets/README.md) — 10k de 41k contatos reais, agregados por canal+mês
 
 ## Conceitos cobertos
 
