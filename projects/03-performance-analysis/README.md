@@ -19,8 +19,17 @@
 
 ## Rodar
 
-Abra [`notebook.ipynb`](./notebook.ipynb) no Colab ou Jupyter local. Todo o
-código usa mocks — não precisa de API key pra rodar como está.
+Abra [`notebook.ipynb`](./notebook.ipynb) no Colab ou Jupyter local.
+
+- **Sem `ANTHROPIC_API_KEY`:** roda em modo mock, determinístico, sem custo.
+- **Com `ANTHROPIC_API_KEY`** no ambiente: a análise de tendência/valor de
+  mercado chama a Claude API de verdade.
+
+**Testes:** seção final, valida range de confidence e categoria válida de
+tendência.
+
+**Docker:** `docker build -f Dockerfile -t performance-analysis ..` (a
+partir da raiz do repo).
 
 ## Próximos passos pra produção
 

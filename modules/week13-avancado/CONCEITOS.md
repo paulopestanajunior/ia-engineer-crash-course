@@ -81,9 +81,10 @@ em vez de horas.
 - Customização específica da empresa
 - Redução de custo: ~99%
 
-**Hands-On:** ⏳ não implementado no mock — LoRA requer um modelo aberto
-rodando localmente (não a API da Anthropic), então não faz sentido mockar.
-Ver nota no notebook do Projeto #4.
+**Hands-On:** [`projects/04-mmm-optimization/notebook.ipynb`](../../projects/04-mmm-optimization/notebook.ipynb) — seção 9,
+treino LoRA **real** (não mockado) num modelo pequeno (`sshleifer/tiny-gpt2`,
+via PyTorch + HuggingFace `peft`). Mesma mecânica que produção, só troca o
+tamanho do modelo.
 **Projeto:** #4 MMM (adaptar pro dataset da empresa)
 
 ---

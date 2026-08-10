@@ -1,4 +1,4 @@
-# 📊 PROJETO #4: Marketing Mix Modeling (MMM) - AI-Powered Budget Optimization
+# 📊 PROJETO #4: Marketing Mix Modeling (MMM) - Otimização de Budget com IA
 
 ---
 

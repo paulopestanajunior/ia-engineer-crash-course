@@ -519,7 +519,7 @@ async def test_end_to_end_agent():
 
 ### Semana 7: Monitoramento & Observabilidade
 
-#### **7.1 Structured Logging**
+#### **7.1 Logging Estruturado**
 ```python
 import logging
 from google.cloud import logging as cloud_logging

@@ -6,18 +6,23 @@ links pros notebooks que implementam o conceito na prática.
 | Semana | Módulo | Hands-on |
 |---|---|---|
 | 1-2 | [week01-fundamentos](./week01-fundamentos/CONCEITOS.md) | 4 notebooks (setup) |
-| 2-3 | [week02-structured-outputs](./week02-structured-outputs/CONCEITOS.md) | Projeto #1 |
+| 2-3 | [week02-saidas-estruturadas](./week02-saidas-estruturadas/CONCEITOS.md) | Projeto #1 |
 | 3-4 | [week03-rag](./week03-rag/CONCEITOS.md) | Projetos #1, #2 |
-| 4-5 | [week04-tool-use](./week04-tool-use/CONCEITOS.md) | Projeto #2 |
-| 5-6 | [week05-agents-loops](./week05-agents-loops/CONCEITOS.md) | Projetos #1, #3 |
+| 4-5 | [week04-uso-ferramentas](./week04-uso-ferramentas/CONCEITOS.md) | Projeto #2 |
+| 5-6 | [week05-agentes-loops](./week05-agentes-loops/CONCEITOS.md) | Projetos #1, #3 |
 | 6-7 | [week06-langgraph](./week06-langgraph/CONCEITOS.md) | Projetos #1-4 |
-| 7-8 | [week07-advanced-concepts](./week07-advanced-concepts/CONCEITOS.md) | Projetos #1-3 |
-| 8-9 | [week08-observability](./week08-observability/CONCEITOS.md) | ⏳ parcial |
-| 9-10 | [week09-evaluation](./week09-evaluation/CONCEITOS.md) | ⏳ pendente |
-| 10-11 | [week10-deployment](./week10-deployment/CONCEITOS.md) | ⏳ pendente |
-| 11 | [week11-cost-optimization](./week11-cost-optimization/CONCEITOS.md) | ⏳ pendente (ver bonus) |
-| 12 | [week12-capstone](./week12-capstone/CONCEITOS.md) | ⏳ pendente |
-| 13 | [week13-advanced](./week13-advanced/CONCEITOS.md) | Projeto #4 (MMM) |
+| 7-8 | [week07-conceitos-avancados](./week07-conceitos-avancados/CONCEITOS.md) | Projetos #1-3 |
+| 8-9 | [week08-observabilidade](./week08-observabilidade/CONCEITOS.md) | ⏳ parcial (logging estruturado, sem OTel) |
+| 9-10 | [week09-avaliacao](./week09-avaliacao/CONCEITOS.md) | ⏳ parcial (asserts nos notebooks, sem pytest) |
+| 10-11 | [week10-deploy](./week10-deploy/CONCEITOS.md) | ⏳ parcial (Dockerfile ok, sem GCP real) |
+| 11 | [week11-otimizacao-custo](./week11-otimizacao-custo/CONCEITOS.md) | ⏳ pendente (ver bonus/04-smart-routing) |
+| 12 | [week12-projeto-final](./week12-projeto-final/CONCEITOS.md) | ⏳ pendente (depende das anteriores) |
+| 13 | [week13-avancado](./week13-avancado/CONCEITOS.md) | Projeto #4 (MMM) — 4 de 5 conceitos SOTA implementados, incluindo LoRA real |
 
-**⏳ pendente** = conceito documentado na ementa mas ainda sem código —
-próximo passo depois de trocar os mocks por chamadas reais de API.
+**✅** = implementado e testado · **⏳ parcial** = parte roda de verdade, parte
+depende de infra que este ambiente não tem (conta GCP) · **⏳ pendente** =
+documentado, sem código ainda.
+
+**Todos os 4 notebooks principais chamam a API real da Anthropic quando
+`ANTHROPIC_API_KEY` está definida** — sem ela, caem num mock determinístico
+automaticamente. Ver [GETTING_STARTED.md](../GETTING_STARTED.md).

@@ -55,7 +55,11 @@ escalável no GCP — a plataforma usada neste curso.
 
 ## 10.5 Prática
 
-- **Status:** ⏳ pendente — nenhum Dockerfile/Terraform criado ainda.
+- **Status:** ⏳ parcial. Cada um dos 4 projetos já tem um
+  [`Dockerfile`](../../projects/01-churn-prediction/Dockerfile) real e
+  buildável (roda o notebook como job em batch via `jupyter nbconvert`).
+  Terraform e o deploy de fato no Cloud Run ainda não existem — isso
+  depende de uma conta/projeto GCP real, que este ambiente não tem.
 - **Referência:** [`docs/source-material/08-plano-estudos-gcp.md`](../../docs/source-material/08-plano-estudos-gcp.md)
   tem o plano original de deploy em GCP (Cloud Run, Firestore, Pub/Sub) —
   usar como ponto de partida.

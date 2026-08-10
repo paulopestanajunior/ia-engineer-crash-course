@@ -1,383 +1,124 @@
-# 🚀 Getting Started - IA Engineer Crash Course
+# 🚀 Getting Started
 
-Bem-vindo! Este guia vai te ajudar a configurar o ambiente e começar o curso.
-
----
-
-## 📋 Pré-requisitos
-
-- **Python:** 3.11+
-- **Git:** Pra clonar o repositório
-- **GCP Account:** (Opcional, mas recomendado pra Week 10+)
-- **Claude API Key:** [Get here](https://console.anthropic.com/)
-- **2-3 horas** para setup inicial
+Guia passo a passo pra rodar o curso na sua máquina. Se você quer entender
+*o que* é o curso antes de instalar algo, leia o [README.md](./README.md)
+primeiro — este arquivo é só o "como configurar e rodar".
 
 ---
 
-## 🔧 Setup em 5 Passos
+## Pré-requisitos
 
-### **Passo 1: Clone o Repositório**
+- **Python 3.11+**
+- **Git**
+- **Chave da Anthropic API** — opcional. Sem ela, os 4 notebooks principais
+  rodam em modo mock (determinístico, sem custo). Com ela, chamam a API de
+  verdade. [Pegue uma aqui](https://console.anthropic.com/).
+- **~15 minutos** pra setup (a maior parte é baixar o PyTorch, usado só no
+  LoRA do Projeto #4).
+
+---
+
+## Setup
 
 ```bash
 git clone https://github.com/paulopestanajunior/ia-engineer-crash-course
 cd ia-engineer-crash-course
-```
 
-### **Passo 2: Create Python Virtual Environment**
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
 
-```bash
-# Create venv
-python3 -m venv venv
-
-# Activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# On Windows:
-venv\Scripts\activate
-```
-
-### **Passo 3: Install Dependencies**
-
-```bash
 pip install -r requirements.txt
-```
 
-**Nota:** Se encontrar problemas com versões, edite `requirements.txt` para versões mais recentes.
-
-### **Passo 4: Configure Environment Variables**
-
-```bash
-# Copy example to .env
 cp .env.example .env
-
-# Edit .env with your keys
-nano .env  # ou use seu editor favorito
+# Edite .env e coloque sua ANTHROPIC_API_KEY (opcional — sem ela, roda em modo mock)
 ```
 
-**Required variables:**
-```env
-# Claude API
-ANTHROPIC_API_KEY=your_key_here
-
-# GCP (para Week 10+)
-GCP_PROJECT_ID=your-project-id
-GCP_CREDENTIALS_PATH=/path/to/credentials.json
-
-# Optional
-OPENAI_API_KEY=your_key_here  # Se quiser usar GPT-4o
-
-```
-
-### **Passo 5: Verify Installation**
+## Rodando os notebooks
 
 ```bash
-# Test Claude API
-cd modules/week01-fundamentos
-python colab_hello_world.py
+jupyter notebook
 ```
 
-**Expected output:**
-```
-✅ Claude API is working!
-Your model: claude-3-5-sonnet-20241022
-```
+Abra qualquer `projects/0N-*/notebook.ipynb` e rode célula por célula
+(`Shift+Enter`). Cada notebook já tem o output real de uma execução
+anterior embutido — dá pra ler sem nem rodar, só pra entender o que
+acontece.
+
+**Comece por:** [`projects/01-churn-prediction/notebook.ipynb`](./projects/01-churn-prediction/notebook.ipynb)
+— é o mais simples dos 4, e a primeira célula de cada notebook imprime
+`🔑 Modo: MOCK` ou `🔑 Modo: API REAL`, confirmando se sua chave foi
+detectada.
 
 ---
 
-## 📁 Estrutura do Repositório
-
-Após clone, você terá:
+## Estrutura do Repositório
 
 ```
 ia-engineer-crash-course/
-├── README.md           ← Start here!
-├── EMENTA.md          ← Curriculum
-├── GETTING_STARTED.md ← You are here
+├── README.md                 ← visão geral do curso, comece aqui
+├── EMENTA.md                 ← índice das 13 semanas
+├── GETTING_STARTED.md         ← você está aqui
 ├── requirements.txt
 ├── .env.example
-├── .gitignore
 │
-├── modules/           ← Conceitos explicativos
+├── modules/                  ← explicação de cada semana (CONCEITOS.md)
 │   ├── week01-fundamentos/
-│   ├── week02-structured-outputs/
-│   ├── ... (weeks 3-12)
-│   └── week13-advanced/
+│   ├── week02-saidas-estruturadas/
+│   ├── ... (semanas 3-12)
+│   └── week13-avancado/
 │
-├── projects/          ← 4 Projetos educacionais
+├── projects/                 ← 4 projetos principais + 5 bônus
 │   ├── 01-churn-prediction/
 │   ├── 02-marketing-campaigns/
 │   ├── 03-performance-analysis/
-│   └── 04-mmm-optimization/
+│   ├── 04-mmm-optimization/
+│   └── bonus-agent-patterns/
 │
-├── datasets/          ← Dados fictícios
-│   ├── customers/
-│   ├── campaigns/
-│   ├── players/
-│   └── marketing/
-│
-├── shared/            ← Código compartilhado
-│   ├── common/
-│   └── utils/
-│
-├── deploy/            ← Infrastructure
-│   ├── docker/
-│   └── terraform/
-│
-└── monitoring/        ← Observability
-    ├── dashboards/
-    └── alerts/
+└── docs/source-material/     ← rascunhos originais de planejamento (numerados)
 ```
+
+Veja [modules/README.md](./modules/README.md) pra status de cada semana e
+[docs/source-material/README.md](./docs/source-material/README.md) pra
+entender os documentos de planejamento.
 
 ---
 
-## ✅ Primeira Execução
+## Troubleshooting
 
-### **Week 1: Fundamentos**
-
+**`ModuleNotFoundError: No module named 'anthropic'` (ou `torch`, `peft`, etc.)**
 ```bash
-# Navegue para week 1
-cd modules/week01-fundamentos
-
-# Execute o exemplo Hello World
-python colab_hello_world.py
-
-# Veja o output esperado
-# Output: 
-#   ✅ Claude API Working
-#   Model: claude-3-5-sonnet-20241022
-#   Greeting: Hello Paulo! ...
-```
-
----
-
-## 🧠 Entendendo a Estrutura
-
-### **Módulos (modules/)**
-
-Cada semana tem:
-- `CONCEITOS.md` - Explicações teóricas
-- `colab_*.py` - Código prático rodável
-- `examples/` - Exemplos adicionais
-
-**Exemplo Week 1:**
-```
-modules/week01-fundamentos/
-├── CONCEITOS.md
-├── colab_hello_world.py
-├── colab_prompt_engineering.py
-├── colab_api_integration.py
-└── examples/
-    ├── chatbot_simple.py
-    ├── error_handling.py
-    └── cost_tracking.py
-```
-
-### **Projetos (projects/)**
-
-Cada projeto tem:
-- `README.md` - Descrição + objetivos
-- `src/` - Código fonte
-- `data/` - Dataset
-- `tests/` - Testes
-- `deploy/` - Dockerfile + terraform
-
-**Exemplo Projeto #1:**
-```
-projects/01-churn-prediction/
-├── README.md
-├── src/
-│   ├── agent.py
-│   ├── graph.py
-│   ├── tools.py
-│   └── evaluator.py
-├── data/
-│   ├── customers.csv
-│   └── README.md
-├── tests/
-│   ├── test_agent.py
-│   └── test_tools.py
-├── deploy/
-│   ├── Dockerfile
-│   └── terraform.tf
-└── requirements.txt
-```
-
-### **Datasets (datasets/)**
-
-Dados fictícios mas realistas:
-- `customers/` - 10k clientes (churn prediction)
-- `campaigns/` - 1000 campanhas (marketing analysis)
-- `players/` - 500 jogadores (performance analysis)
-- `marketing/` - 100 weeks histórico (MMM)
-
----
-
-## 🎯 Plano de Estudos Recomendado
-
-### **Semana 1 (Você está aqui!)**
-- [ ] Setup ambiente completo
-- [ ] Ler README.md e EMENTA.md
-- [ ] Execute `colab_hello_world.py`
-- [ ] Leia `modules/week01-fundamentos/CONCEITOS.md`
-- [ ] Execute todos os Colabs da Week 1
-
-### **Semana 2**
-- [ ] Conceito: Structured Outputs
-- [ ] Execute `modules/week02-structured-outputs/colab_pydantic.py`
-- [ ] Inicie Projeto #1: Churn Prediction
-- [ ] Setup ambiente do Projeto #1
-
-### **Semana 3-4**
-- [ ] RAG concepts
-- [ ] Vector DB setup
-- [ ] Integre RAG no Projeto #1
-
-**... Continue assim por 13 semanas!**
-
----
-
-## 🐛 Troubleshooting
-
-### **Erro: `ModuleNotFoundError: No module named 'anthropic'`**
-
-```bash
-# Certifique-se que o venv está ativado
-source venv/bin/activate
-
-# Reinstale dependencies
+source venv/bin/activate   # confirme que o venv está ativado
 pip install -r requirements.txt
 ```
 
-### **Erro: `ANTHROPIC_API_KEY not found`**
+**Notebook roda em modo MOCK mesmo com `.env` configurado**
 
-```bash
-# Verifique se .env existe
-cat .env
-
-# Se não existir, crie:
-cp .env.example .env
-nano .env  # Add your API key
+O `.env` não é lido automaticamente pelo Jupyter — exporte a variável no
+terminal antes de abrir o Jupyter, ou carregue com `python-dotenv` na
+primeira célula:
+```python
+from dotenv import load_dotenv
+load_dotenv()
 ```
 
-### **Erro: `google-cloud-firestore requires authentication`**
+**Download do modelo do Projeto #4 (LoRA) muito lento**
 
-Até Week 10 você não precisa. Mas se quiser testar cedo:
+A seção de LoRA baixa um modelo pequeno (`sshleifer/tiny-gpt2`, ~100k
+parâmetros) do Hugging Face Hub na primeira execução — precisa de internet.
+Depois disso fica em cache local (`~/.cache/huggingface/`).
 
-```bash
-# Setup GCP authentication
-gcloud auth login
-gcloud config set project YOUR_PROJECT_ID
-```
+**`pytest` não encontra testes**
 
-### **Erro: `Port 8080 already in use`**
-
-Se running Cloud Run locally:
-```bash
-PORT=8081 python your_app.py
-```
-
-### **Conexão lenta / Timeout**
-
-```bash
-# Verifique sua conexão internet
-ping google.com
-
-# Se ainda lento, aumente timeout
-export ANTHROPIC_TIMEOUT=60
-```
+Os testes deste curso são células dentro dos próprios notebooks (rode o
+notebook — as células de teste têm um cabeçalho "Testes básicos" e
+imprimem `✓ ... passou`), não arquivos `test_*.py` separados ainda.
 
 ---
 
-## 📚 Recursos Úteis
+## Próximo Passo
 
-### **Documentação Oficial**
-- [Anthropic Claude API](https://docs.anthropic.com/)
-- [LangChain](https://python.langchain.com/)
-- [LangGraph](https://langchain-ai.github.io/langgraph/)
-- [GCP Cloud Run](https://cloud.google.com/run/docs)
+1. Leia [`modules/week01-fundamentos/CONCEITOS.md`](./modules/week01-fundamentos/CONCEITOS.md)
+2. Rode [`projects/01-churn-prediction/notebook.ipynb`](./projects/01-churn-prediction/notebook.ipynb) célula por célula
+3. Siga a ordem sugerida em [EMENTA.md](./EMENTA.md)
 
-### **Community**
-- Anthropic Discord (join no site)
-- GitHub Discussions (issues no repo)
-- LangChain Community Forum
-
-### **Learning Resources**
-- Deep Learning Fundamentals (3Blue1Brown)
-- Attention is All You Need (Transformer paper)
-- Prompt Engineering Guide (OpenAI)
-
----
-
-## 🚀 Quick Commands
-
-```bash
-# Ativar venv
-source venv/bin/activate
-
-# Instalar packages
-pip install -r requirements.txt
-
-# Run Week 1 example
-cd modules/week01-fundamentos && python colab_hello_world.py
-
-# Run tests
-pytest projects/01-churn-prediction/tests/
-
-# Format code
-black .
-
-# Run linter
-flake8 .
-
-# Type checking
-mypy .
-
-# Deploy (after Week 10)
-cd projects/01-churn-prediction && make deploy
-```
-
----
-
-## ✅ Setup Checklist
-
-- [ ] Python 3.11+ installed
-- [ ] Repository cloned
-- [ ] Virtual environment created & activated
-- [ ] Requirements installed
-- [ ] `.env` file created with API keys
-- [ ] `colab_hello_world.py` runs successfully
-- [ ] Understand repository structure
-- [ ] Read README.md and EMENTA.md
-
----
-
-## 🎓 Próximo Passo
-
-Após completar setup:
-
-1. **Leia:** `modules/week01-fundamentos/CONCEITOS.md`
-2. **Execute:** `colab_hello_world.py`
-3. **Experimente:** Modifique o código, teste coisas
-4. **Comece:** Week 1 de estudos!
-
----
-
-## 💬 Perguntas?
-
-- Check [README.md](./README.md) primeiro
-- See [EMENTA.md](./EMENTA.md) pra curriculum
-- Look for existing issues no GitHub
-- Abra uma nova issue se problema novo
-
----
-
-**Pronto pra começar? 🚀**
-
-```bash
-cd modules/week01-fundamentos
-python colab_hello_world.py
-```
-
-**Let's go! 🎓**
-
+**Bons estudos! 🚀**

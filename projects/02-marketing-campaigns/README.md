@@ -18,12 +18,20 @@
 
 ## Rodar
 
-Abra [`notebook.ipynb`](./notebook.ipynb) no Colab ou Jupyter local. Todo o
-código usa mocks — não precisa de API key pra rodar como está.
+Abra [`notebook.ipynb`](./notebook.ipynb) no Colab ou Jupyter local.
+
+- **Sem `ANTHROPIC_API_KEY`:** roda em modo mock, determinístico, sem custo.
+- **Com `ANTHROPIC_API_KEY`** no ambiente: `analyzer_agent` chama a Claude
+  API de verdade (extended thinking via `tool_use`).
+
+**Testes:** seção final, valida que CTR/CPA nunca são negativos e que a
+recomendação bate com a classificação de performance.
+
+**Docker:** `docker build -f Dockerfile -t marketing-campaigns ..` (a
+partir da raiz do repo).
 
 ## Próximos passos pra produção
 
-- Trocar `analyzer_agent`/`recommender_agent` por chamadas reais à Anthropic
 - Semantic cache real (Vertex AI Embeddings + Redis)
 - Dataset real do BigQuery no lugar do gerador sintético
 - Avaliação real: taxa de adoção das recomendações pelo time de marketing

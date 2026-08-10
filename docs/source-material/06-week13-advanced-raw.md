@@ -1,8 +1,8 @@
-# ⚡ WEEK 13: ADVANCED CONCEPTS - Speculative Decoding, Constitutional AI, MoE, Fine-tuning, Synthetic Data
+# ⚡ WEEK 13: CONCEITOS AVANÇADOS - Speculative Decoding, Constitutional AI, MoE, Fine-tuning, Synthetic Data
 
 ---
 
-## 📋 OVERVIEW
+## 📋 VISÃO GERAL
 
 5 conceitos SOTA em 2026:
 
@@ -438,7 +438,7 @@ PROJETO #4: Marketing Mix Modeling ⭐⭐⭐
 
 ---
 
-## 📊 COMPARAÇÃO: Com vs Sem Advanced Concepts
+## 📊 COMPARAÇÃO: Com vs Sem Conceitos Avançados
 
 ```
 Métrica                  Sem Advanced  Com Advanced   Melhoria

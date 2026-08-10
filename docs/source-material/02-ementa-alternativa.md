@@ -1,4 +1,4 @@
-# 🎓 CURSO COMPLETO: AI Engineering in Production
+# 🎓 CURSO COMPLETO: AI Engineering em Produção
 ## Ementa Padrão de Mercado + 3 Projetos Educacionais
 
 ---
@@ -21,19 +21,19 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 
 ## **MÓDULO 1: FUNDAMENTOS DE LLMs EM PRODUÇÃO** (Week 1-2)
 
-### 1.1 LLM Architecture & How They Work
+### 1.1 Arquitetura de LLMs e Como Funcionam
 - Transformer basics
 - Tokenization & embeddings
 - Context windows & prompt engineering
 - Model selection (Claude vs GPT-4o vs others)
 
-### 1.2 Prompt Engineering Fundamentals
+### 1.2 Fundamentos de Prompt Engineering
 - **Concept**: Few-shot vs Zero-shot
 - **Concept**: Chain-of-Thought (CoT)
 - **Concept**: System prompts & roles
 - Best practices & anti-patterns
 
-### 1.3 API Integration Basics
+### 1.3 Fundamentos de Integração com API
 - REST API calls
 - Rate limiting & retry logic
 - Cost tracking & budgeting
@@ -49,19 +49,19 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 
 ## **MÓDULO 2: STRUCTURED DATA & OUTPUTS** (Week 2-3)
 
-### 2.1 Structured Outputs (NEW 2025-2026)
+### 2.1 Saídas Estruturadas (NOVO 2025-2026)
 - **Concept**: JSON mode vs Tools vs Structured outputs
 - **Concept**: Schema validation & type safety
 - **Concept**: Parsing reliability (99.9% vs 98%)
 - **Tool**: Pydantic v2 + JSON schema
 
-### 2.2 Data Validation & Quality
+### 2.2 Validação e Qualidade de Dados
 - Input validation
 - Output verification
 - Error recovery patterns
 - Fallback strategies
 
-### 2.3 Working with Databases
+### 2.3 Trabalhando com Bancos de Dados
 - Querying data for context
 - Schema design for AI agents
 - Real-time data fetching
@@ -78,13 +78,13 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 
 ## **MÓDULO 3: RETRIEVAL-AUGMENTED GENERATION (RAG)** (Week 3-4)
 
-### 3.1 Traditional RAG (Static)
+### 3.1 RAG Tradicional (Estático)
 - **Concept**: Retriever-Reader architecture
 - **Concept**: Vector embeddings & similarity search
 - **Concept**: Chunking strategies
 - **Tool**: Pinecone, Weaviate, Chroma
 
-### 3.2 Advanced RAG (State-of-the-Art 2026)
+### 3.2 RAG Avançado (Estado da Arte 2026)
 - **Concept**: Adaptive RAG (decide when to retrieve)
 - **Concept**: Hybrid search (vector + keyword)
 - **Concept**: Re-ranking (improve relevance)
@@ -156,7 +156,7 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 - **Concept**: Planning agents (think before acting)
 - **Concept**: Multi-agent systems (teams of agents)
 
-### 5.2 Agentic Loops (THE CORE)
+### 5.2 Loops Agênticos (THE CORE)
 - **Concept**: Decide → Act → Observe → Loop
 - **Concept**: Loop termination conditions
 - **Concept**: Max iterations & budgets
@@ -227,7 +227,7 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 
 ---
 
-## **MÓDULO 7: ADVANCED CONCEPTS** (Week 7-8)
+## **MÓDULO 7: CONCEITOS AVANÇADOS** (Week 7-8)
 
 ### 7.1 Confidence Scoring & Uncertainty
 - **Concept**: Confidence metrics
@@ -305,25 +305,25 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 
 ## **MÓDULO 9: EVALUATION & QUALITY ASSURANCE** (Week 9-10)
 
-### 9.1 Evaluation Frameworks
+### 9.1 Frameworks de Avaliação
 - **Concept**: Defining quality metrics
 - **Concept**: Ground truth datasets
 - **Concept**: Automated vs manual evaluation
 - **Concept**: Benchmark suites
 
-### 9.2 LLM Evaluation
+### 9.2 Avaliação de LLM
 - **Concept**: Semantic similarity (vs exact match)
 - **Concept**: Factuality checking
 - **Concept**: Relevance scoring
 - **Concept**: Using another LLM as judge
 
-### 9.3 Agent Evaluation
+### 9.3 Avaliação de Agente
 - **Concept**: Task completion rate
 - **Concept**: Tool usage correctness
 - **Concept**: Decision quality
 - **Concept**: Cost efficiency
 
-### 9.4 Continuous Evaluation
+### 9.4 Avaliação Contínua
 - **Concept**: A/B testing agents
 - **Concept**: Shadow mode (run parallel, don't act)
 - **Concept**: Feedback loops
@@ -354,7 +354,7 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 - **Concept**: Container registries
 - **Concept**: Version management
 
-### 10.2 Cloud Deployment (GCP Focus)
+### 10.2 Deploy em Nuvem (Foco GCP)
 - **Concept**: Cloud Run (serverless)
 - **Concept**: Cloud Tasks (job queues)
 - **Concept**: Firestore (NoSQL DB)
@@ -389,7 +389,7 @@ CAPSTONE + DEPLOYMENT (Weeks 11-12)
 - **Concept**: Model selection economics
 - **Concept**: Batch processing vs streaming
 
-### 11.2 Agent Cost Optimization
+### 11.2 Agent Otimização de Custo
 - **Concept**: Reducing tool calls
 - **Concept**: Smart routing (cheap vs expensive models)
 - **Concept**: Parallel vs sequential execution

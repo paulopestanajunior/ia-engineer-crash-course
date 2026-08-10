@@ -81,7 +81,7 @@ Você vai fazer um **CURSO COMPLETO DE AI ENGINEERING** (12 semanas) onde:
 
 ---
 
-## 📊 MAPPING: Ementa ↔ Projetos
+## 📊 MAPEAMENTO: Ementa ↔ Projetos
 
 ```
 WEEK  CONCEITO                    PROJ #1    PROJ #2    PROJ #3
@@ -129,14 +129,14 @@ WEEK  CONCEITO                    PROJ #1    PROJ #2    PROJ #3
 - [ ] Otimize: Semantic caching
 - [ ] Monitor: Query latency
 
-### **SEMANA 4-5: Tool Use**
+### **SEMANA 4-5: Uso de Ferramentas**
 - [ ] Leia: Ementa Week 4-5
 - [ ] Inicie **PROJETO #2: Marketing Campaigns**
 - [ ] Defina: Tools (query DB, fetch analytics)
 - [ ] Teste: Sequential vs Parallel tool calling
 - [ ] Monitore: Tool execution success rate
 
-### **SEMANA 5-6: Agents & Loops**
+### **SEMANA 5-6: Agentes & Loops**
 - [ ] Leia: Ementa Week 5-6
 - [ ] Implemente: Agentic loops (max iterations, stopping rules)
 - [ ] Atualize: Churn com multi-strategy loop
@@ -150,7 +150,7 @@ WEEK  CONCEITO                    PROJ #1    PROJ #2    PROJ #3
 - [ ] Projeto #2: Branching graph (Analyzer → Decision → Recommender)
 - [ ] Projeto #3: Streaming graph (Ingest → Update → Report)
 
-### **SEMANA 7-8: Advanced Concepts**
+### **SEMANA 7-8: Conceitos Avançados**
 - [ ] Confidence scoring em todos os projetos
 - [ ] Semantic caching em #2
 - [ ] Streaming/Real-time em #3
@@ -163,7 +163,7 @@ WEEK  CONCEITO                    PROJ #1    PROJ #2    PROJ #3
 - [ ] Projeto #3: Track real-time update lag
 - [ ] Dashboards: Grafana/Cloud Console
 
-### **SEMANA 9-10: Evaluation & Testing**
+### **SEMANA 9-10: Avaliação & Testes**
 - [ ] Unit tests: Todos os 3 projetos
 - [ ] Integration tests: Tool calling
 - [ ] E2E tests: Full workflows
@@ -171,7 +171,7 @@ WEEK  CONCEITO                    PROJ #1    PROJ #2    PROJ #3
 - [ ] Projeto #2: Recommendation adoption rate
 - [ ] Projeto #3: Market value prediction accuracy
 
-### **SEMANA 10-11: Deployment & Cost**
+### **SEMANA 10-11: Deploy & Custo**
 - [ ] Docker: Containerize todos
 - [ ] Terraform: Infrastructure as code (GCP)
 - [ ] Cost tracking: Cloud Monitoring
@@ -179,7 +179,7 @@ WEEK  CONCEITO                    PROJ #1    PROJ #2    PROJ #3
 - [ ] SLOs: Define availability & latency targets
 - [ ] Go live: Production deployment
 
-### **SEMANA 11-12: Capstone & Optimization**
+### **SEMANA 11-12: Capstone & Otimização**
 - [ ] Final tuning de performance
 - [ ] A/B testing (if applicable)
 - [ ] Case study documentation

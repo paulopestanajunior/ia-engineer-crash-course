@@ -214,7 +214,7 @@ print("=" * 50)
 
 agent = InvoiceAgent()
 
-# Sample data
+# Dados de exemplo
 invoice = Invoice(
     vendor_id="VENDOR_ACME",
     amount=5000.00,

@@ -58,8 +58,10 @@ melhorou ou piorou até um usuário reclamar.
 
 ## 9.5 Prática
 
-- **Status:** ⏳ pendente. Nenhum dos 4 projetos tem suite de testes ainda —
-  próximo passo natural depois de trocar os mocks por chamadas reais à API.
+- **Status:** ⏳ parcial. Cada um dos 4 notebooks tem uma seção "Testes
+  básicos" com `assert`s validando invariantes (confidence no range 0-1,
+  stopping rule respeitada, schema correto) — não é uma suite `pytest`
+  separada ainda, mas já é mais que "rodou sem erro".
 - **Projeto #1:** accuracy vs churn real (observado após 30 dias)
 - **Projeto #2:** taxa de adoção das recomendações
 - **Projeto #3:** accuracy da predição vs performance real
