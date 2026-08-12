@@ -10,13 +10,21 @@
 
 ## O que é
 
-Curso prático de AI Engineering: 13 semanas de conceitos (`modules/`) +
-4 projetos com notebook funcional (`projects/`) que aplicam Harness + Loop +
-Graph Engineering em domínios reais — churn, marketing, performance
-esportiva e marketing mix modeling.
+Curso prático de AI Engineering, em duas fases:
 
-**Pra rodar:** veja [GETTING_STARTED.md](./GETTING_STARTED.md).
-**Pra entender o currículo semana a semana:** veja [EMENTA.md](./EMENTA.md).
+- **Fase 1** (`modules/` + `projects/`): 13 semanas construindo *sistemas
+  em cima de* um LLM já treinado — RAG, agentes, LangGraph, aplicados a
+  4 domínios reais (churn, marketing, performance esportiva, MMM).
+- **Fase 2** ([`advanced-llm-customization/`](./advanced-llm-customization/)):
+  12 semanas de *customização de LLM* — fine-tuning (SFT, LoRA, QLoRA),
+  alinhamento (DPO), RL (GRPO), destilação, MoE, quantização. Cobre a
+  mesma ementa de um curso pago de R$3.500 (I2A2 Institute), com código
+  original testado — inclusive achados reais de debugging documentados em
+  cada lab (reward esparsa, viés de comprimento, gradiente quase nulo).
+
+**Pra rodar a Fase 1:** veja [GETTING_STARTED.md](./GETTING_STARTED.md).
+**Pra entender o currículo da Fase 1:** veja [EMENTA.md](./EMENTA.md).
+**Pra começar a Fase 2:** veja [advanced-llm-customization/README.md](./advanced-llm-customization/README.md).
 
 ---
 
